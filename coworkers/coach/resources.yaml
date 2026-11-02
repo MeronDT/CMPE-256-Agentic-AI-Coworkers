@@ -1,5 +1,5 @@
 # Curated learning resources. The coach can only recommend from this list and from briefs,
-# so it cannot invent a link. tests/test_resources.py-style checks run through `eval`.
+# so it cannot invent a link. eval/run_eval.py confirms these links still work.
 - {title: "NeetCode roadmap", url: "https://neetcode.io/roadmap", skills: [dsa]}
 - {title: "Tech Interview Handbook", url: "https://www.techinterviewhandbook.org/", skills: [dsa, behavioral]}
 - {title: "System Design 101 (ByteByteGo)", url: "https://github.com/ByteByteGoHq/system-design-101", skills: [system-design, api-design]}
