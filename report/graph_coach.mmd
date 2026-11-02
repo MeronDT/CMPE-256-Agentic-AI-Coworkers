@@ -1,0 +1,31 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	load_context(load_context)
+	scout(scout)
+	analyze(analyze)
+	assess_gaps(assess_gaps)
+	generate_questions(generate_questions)
+	ask(ask)
+	evaluate(evaluate)
+	next_step(next_step)
+	report(report)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> load_context;
+	analyze --> assess_gaps;
+	ask --> evaluate;
+	assess_gaps --> generate_questions;
+	evaluate --> next_step;
+	generate_questions --> ask;
+	load_context --> scout;
+	next_step -.-> ask;
+	next_step -.-> report;
+	scout --> analyze;
+	report --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc

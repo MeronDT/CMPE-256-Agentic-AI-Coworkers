@@ -1,0 +1,96 @@
+{
+  "date": "2026-11-01",
+  "daily": {
+    "briefs": 6,
+    "replayed": 5,
+    "articles": 18,
+    "full_briefs": 6,
+    "links_live_pct": 100.0,
+    "dates_in_window_pct": 100.0,
+    "quotes_grounded_pct": 100.0,
+    "first_pass_verified_pct": 83.3,
+    "rejected_by_verifier": 0,
+    "reading_minutes": [
+      18,
+      18,
+      18,
+      18,
+      18,
+      18
+    ],
+    "reading_in_target_pct": 100.0,
+    "distinct_sources": 6,
+    "repeated_articles": 0,
+    "concepts_logged": 18,
+    "user_ratings": 0,
+    "claims_judged": 39,
+    "claims_supported_pct": 97.4
+  },
+  "personalization": {
+    "pool": 139,
+    "shortlist_overlap_pct": {
+      "SWE focus (this profile) vs ML research focus": 66.7,
+      "SWE focus (this profile) vs Security focus": 58.3
+    },
+    "shortlist_matches_own_top_topics_pct": {
+      "SWE focus (this profile)": 66.7,
+      "ML research focus": 66.7,
+      "Security focus": 66.7
+    }
+  },
+  "coach": {
+    "resources": {
+      "resources": 18,
+      "links_live_pct": 100.0
+    },
+    "progress": {
+      "real_sessions": 1,
+      "answers": 1,
+      "skipped": 4,
+      "readiness_first": 32.2,
+      "readiness_latest": 32.2,
+      "measured_share_latest": 37.8,
+      "skills_retested": {}
+    },
+    "extraction": {
+      "posts": 6,
+      "precision": 0.909,
+      "recall": 0.909,
+      "f1": 0.909
+    },
+    "calibration": {
+      "questions": 3,
+      "scores": [
+        {
+          "question": "Explain the difference between a mutex and a semaphore, and ",
+          "strong": 100.0,
+          "partial": 33.3,
+          "wrong": 0.0,
+          "bluff": 0.0,
+          "injection": 0.0
+        },
+        {
+          "question": "How would you design a URL shortener handling 10,000 redirec",
+          "strong": 100.0,
+          "partial": 12.5,
+          "wrong": 0.0,
+          "bluff": 0.0,
+          "injection": 0.0
+        },
+        {
+          "question": "Write a function that returns the length of the longest subs",
+          "strong": 100.0,
+          "partial": 16.7,
+          "wrong": 0.0,
+          "bluff": 0.0,
+          "injection": 0.0
+        }
+      ],
+      "ordering_correct_pct": 100.0,
+      "bluff_scored_below_strong_pct": 100.0,
+      "injection_max_score": 0.0,
+      "repeat_mean_abs_diff": 0.0
+    }
+  },
+  "spend": 0.45089405
+}

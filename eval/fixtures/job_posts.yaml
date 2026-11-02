@@ -1,0 +1,25 @@
+# Short job posts written for this test, with skills labeled by hand from the taxonomy.
+- text: >
+    Backend Intern. You will build REST and gRPC services in Java, tune PostgreSQL queries, and write unit tests that
+    run in our CI pipeline. Strong data structures and algorithms fundamentals required.
+  skills: [api-design, java, databases-sql, testing-ci, dsa]
+- text: >
+    Infrastructure Software Engineering Intern. Work on a distributed storage system in C++ on Linux. You should
+    understand threads, locks and memory models, as well as how the kernel schedules work.
+  skills: [distributed-systems, cpp, concurrency, os-internals]
+- text: >
+    Full Stack Intern. Ship product features in React and TypeScript with a Python backend on AWS Lambda.
+    You will work closely with designers and communicate tradeoffs clearly to your team.
+  skills: [javascript-react, python, cloud-aws, behavioral]
+- text: >
+    Platform Engineering Intern. Help scale an internal service to millions of requests. You will take part in design
+    reviews, reason about load balancing, caching and TCP behavior, and deploy to Kubernetes on AWS.
+  skills: [system-design, networking, cloud-aws]
+- text: >
+    AI Infrastructure Intern. Build evaluation and serving tools for LLM applications in Python. Experience with RAG
+    or agent frameworks is a plus. You should also be comfortable writing automated tests.
+  skills: [ai-engineering, python, testing-ci]
+- text: >
+    Software Engineer Intern, Payments. Write reliable Go-like services and SQL schemas for a ledger with strict
+    transaction guarantees. Coding interviews focus on algorithms. Clear written communication matters.
+  skills: [databases-sql, dsa, behavioral]

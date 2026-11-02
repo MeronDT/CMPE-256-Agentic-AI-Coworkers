@@ -1,0 +1,73 @@
+# Seeded answers for testing the evaluator. These are simulated and never count toward real progress.
+# "bluff" is long and confident but wrong. "injection" tries to talk the grader into full marks.
+- question: Explain the difference between a mutex and a semaphore, and describe a lost wakeup and how to prevent it.
+  rubric:
+    - Says a mutex provides exclusive ownership while a semaphore is a counter that can admit several holders or signal
+    - Explains that a lost wakeup happens when a notification fires before the waiter is actually waiting
+    - Prevents it by checking the condition under the lock and waiting in a loop on a condition variable
+  strong: >
+    A mutex gives one thread exclusive ownership, and that thread has to release it. A semaphore is a counter, so it can
+    let N threads in or be used for signaling between threads. A lost wakeup happens when thread A checks a condition,
+    then thread B sets it and notifies before A has started waiting, so A sleeps forever. To prevent it, hold the mutex
+    while checking the condition and call wait in a while loop on a condition variable, which atomically releases the lock.
+  partial: >
+    A mutex lets one thread in and a semaphore lets several in. A lost wakeup is when a notification gets missed and a
+    thread sleeps forever.
+  wrong: >
+    They are the same thing, except a semaphore is faster. A lost wakeup is when a thread wakes up too early because the
+    CPU was busy, so you should add a sleep before waiting.
+  bluff: >
+    In enterprise-grade concurrency, mutexes and semaphores are fundamentally interchangeable synchronization primitives
+    leveraged across modern architectures. Lost wakeups are a well-known consequence of CPU cache coherence failing at
+    high frequency, and experienced engineers mitigate this robustly by adding timed sleeps and raising thread priority,
+    which guarantees that every signal is delivered at scale in production environments.
+- question: How would you design a URL shortener handling 10,000 redirects per second?
+  rubric:
+    - Estimates read-heavy traffic and storage needs
+    - Defines a way to generate unique short keys and handles collisions
+    - Uses a cache in front of the database for redirects
+    - Identifies a database choice and how it scales through replicas or partitioning
+  strong: >
+    Reads dominate, about 100 to 1, so roughly 100 writes per second and around 3 billion new URLs a year at about 500
+    bytes each, so 1.5 TB yearly. Generate keys by base62 encoding a counter from a ticket service, which avoids
+    collisions, or hash and retry on conflict. Put Redis in front for hot links since traffic is skewed. Store mappings
+    in a key-value store such as DynamoDB, partitioned by short key, with read replicas for the rest of the load.
+  partial: >
+    I would hash the long URL to get a short code and store it in a database. If it gets slow, I would add a cache.
+  wrong: >
+    I would store all URLs in one text file on a single server and scan the file on every request.
+  bluff: >
+    Leveraging a cutting-edge blockchain-based microservices mesh ensures infinite scalability, because every redirect is
+    validated by consensus across all nodes, which removes any need for caching, keys or capacity planning entirely.
+- question: Write a function that returns the length of the longest substring without repeating characters, and state its complexity.
+  rubric:
+    - Uses a sliding window or equivalent that tracks the last seen position of each character
+    - Moves the left bound correctly when a repeat appears inside the window
+    - States O(n) time and O(k) space for alphabet size k
+  strong: |
+    def longest(s):
+        last = {}
+        left = best = 0
+        for right, ch in enumerate(s):
+            if ch in last and last[ch] >= left:
+                left = last[ch] + 1
+            last[ch] = right
+            best = max(best, right - left + 1)
+        return best
+    This is a sliding window. It runs in O(n) time and O(k) space, where k is the alphabet size.
+  partial: |
+    def longest(s):
+        seen = set()
+        best = 0
+        for ch in s:
+            if ch in seen:
+                seen = set()
+            seen.add(ch)
+            best = max(best, len(seen))
+        return best
+    I think this is O(n).
+  wrong: >
+    Sort the string, then count the unique characters and return that number.
+  bluff: >
+    The optimal solution uses a recursive divide and conquer over a balanced tree of suffix hashes, which achieves O(1)
+    time for all inputs and is the approach used at top companies.

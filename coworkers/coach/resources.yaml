@@ -1,0 +1,20 @@
+# Curated learning resources. The coach can only recommend from this list and from briefs,
+# so it cannot invent a link. tests/test_resources.py-style checks run through `eval`.
+- {title: "NeetCode roadmap", url: "https://neetcode.io/roadmap", skills: [dsa]}
+- {title: "Tech Interview Handbook", url: "https://www.techinterviewhandbook.org/", skills: [dsa, behavioral]}
+- {title: "System Design 101 (ByteByteGo)", url: "https://github.com/ByteByteGoHq/system-design-101", skills: [system-design, api-design]}
+- {title: "The System Design Primer", url: "https://github.com/donnemartin/system-design-primer", skills: [system-design, distributed-systems]}
+- {title: "MIT 6.5840 Distributed Systems", url: "https://pdos.csail.mit.edu/6.824/", skills: [distributed-systems, concurrency]}
+- {title: "Designing Data-Intensive Applications", url: "https://dataintensive.net/", skills: [distributed-systems, databases-sql]}
+- {title: "Google SRE Book", url: "https://sre.google/sre-book/table-of-contents/", skills: [testing-ci, distributed-systems]}
+- {title: "Operating Systems: Three Easy Pieces", url: "https://pages.cs.wisc.edu/~remzi/OSTEP/", skills: [os-internals, concurrency]}
+- {title: "Use The Index, Luke", url: "https://use-the-index-luke.com/", skills: [databases-sql]}
+- {title: "PostgreSQL Tutorial (official docs)", url: "https://www.postgresql.org/docs/current/tutorial.html", skills: [databases-sql]}
+- {title: "High Performance Browser Networking", url: "https://hpbn.co/", skills: [networking, api-design]}
+- {title: "Beej's Guide to Network Programming", url: "https://beej.us/guide/bgnet/", skills: [networking, cpp]}
+- {title: "AWS Well-Architected Framework", url: "https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html", skills: [cloud-aws, system-design]}
+- {title: "Java Concurrency tutorial (Oracle)", url: "https://docs.oracle.com/javase/tutorial/essential/concurrency/", skills: [java, concurrency]}
+- {title: "C++ Core Guidelines", url: "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines", skills: [cpp]}
+- {title: "Python asyncio docs", url: "https://docs.python.org/3/library/asyncio.html", skills: [python, concurrency]}
+- {title: "React docs: Learn", url: "https://react.dev/learn", skills: [javascript-react]}
+- {title: "LangGraph docs", url: "https://docs.langchain.com/oss/python/langgraph/overview", skills: [ai-engineering]}
